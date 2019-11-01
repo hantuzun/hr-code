@@ -13,7 +13,10 @@ The most prevalent use case of QR codes is encoding URLs into images. For this p
 
 ### Advantages
  * Users could have an understanding of the data before taking the pain to scan it.
- * Better looking than a printer glitch.
+ * More resistant to phishing attacks as the users could see the URL in print as well.
+ * Harder to interfere by painting black squares on a printed code and directing users to a similar, but malicious URL.
+ * Free to use in any way without attribution. Not protected by a trademark or license like QR code: https://www.qrcode.com/en/faq.html#patentH2Title
+ * Better looking than printer glitches.
 
 ### Disadvantages
  * Unlikely to be adopted by default camera applications even decades later due to network effects.
@@ -88,3 +91,19 @@ r-code
 <img src="github_url_hr_code.png" width="255">
 
 This image is 51 units tall and wide.
+
+## License
+
+<p xmlns:dct="http://purl.org/dc/terms/">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law,
+  <a rel="dct:publisher"
+     href="hantuzun.com">
+    <span property="dct:title">Han Tuzun</span></a>
+  has waived all copyright and related or neighboring rights to
+  <span property="dct:title">HR code</span>.
+</p>
