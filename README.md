@@ -70,6 +70,8 @@ $&.;
 
 This image is 35 units tall and wide.
 
+---
+
 ### This url `https://github.com/hantuzun/hr-code`
 
 The HR code above is the rendering of this url in the format below:
