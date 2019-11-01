@@ -27,7 +27,7 @@ The most prevalent use case of QR codes is encoding URLs into images. For this p
 ### Overview
 
  * HR Codes a rectangle images.
- * HR Codes are sorrounded by a border.
+ * HR Codes are surrounded by a border.
  * HR code is read from left to right and from top to bottom, just as English.
  * There must be an rightwards arrow on the top left.
  * Each character occupies the same square size.
@@ -49,7 +49,7 @@ The most prevalent use case of QR codes is encoding URLs into images. For this p
 ### Layout
 
  * A text of `n` characters should be placed into a square HR code with the following number of rows and columns: `√(n+1)` rounded up to the smallest integer.
-   * For example, 100 chracters should be placed into a square of 11x11 characters. since `10 < √101 <= 11`.
+   * For example, 100 characters should be placed into a square of 11x11 characters. since `10 < √101 <= 11`.
  * Borders and grid paddings are 1 unit.
  * Character backgrounds are 7 x 7 units.
  * If `a` is the number of rows, and `b` is the number of columns, the rendered image is `8a+3`
