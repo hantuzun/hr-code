@@ -21,6 +21,8 @@ The most prevalent use case of QR codes is encoding URLs into images. For this p
 ### Disadvantages
  * Unlikely to be adopted by default camera applications even decades later due to network effects.
  * Larger size required for the same information and scanner quality.
+ * Harder recognition due to 1 corner block rather than 3 corner blocks as in QR code.
+ * Complex error correction implementations are required for client codes.
 
 ## Specification
 
@@ -91,6 +93,42 @@ r-code
 <img src="github_url_hr_code.png" width="255">
 
 This image is 51 units tall and wide.
+
+## Hacker News
+
+The HN post of this repo is https://news.ycombinator.com/item?id=21418882
+
+<a href="https://news.ycombinator.com/item?id=21418882">
+  <img src="https://apifriends.com/wp-content/uploads/2018/08/hacker-news.jpg" width="560">
+ </a>
+
+Below are my comments from the thread above:
+
+> This is just a PoC of an idea I've created after reading https://news.ycombinator.com/item?id=21417026. But who knows, a human readable QR code alternative could born out of this.
+
+
+> When I looked up for this idea, I have found out http://hrqr.org/ but didn't find it much readable. Thanks to the comments here I came across OCR-A, OCR-B, and MICR just now. From these I've found Westminster typeface: http://luc.devroye.org/fonts-48273.html
+>
+> Do you guys think using a font inspired by Westminster be a better choice than the prototype we have now?
+>
+> In any case, the font should be resistant to malicious tampering such as creating an "o" from "c". Manual tampering could be also prevented with trailing checksum images that could be more information dense than the characters.
+
+
+> Error correction concern is the most common among the HN comments. Yes, HR code readers would need to have error correction implementations to be reliable. Since each 7x7 grid of 2^49 binary options could only encode one of the 85 valid characters, HR codes could be recognized with even large chunks missing. On the other hand, implementations would be much more complex than the QR code error correction algorithm.
+>
+> I reduced 3 corner blocks of QR codes to 1. This would make detection of HR codes much harder.
+>
+> OCR, image recognition from video feed and average phone camera and processor has advanced so much in the past years that I think these technical costs could be favored for a human readable QR code alternative.
+
+
+>>  If the app you are using to scan the QR code doesn't ask you for permission before opening the web page that's the problem with the app not the QR code... (wfdctrl's comment)
+>
+> You're right. If the protocol is not secure enough, then the layer above must be secured enough. But it's better to have the security at the protocol level.
+>
+> Obviously QR codes should bring security concerns. First, QR code readers are required to ask for permission to open URLs. They might as well not implement it or could have malicious codes for misrepresenting the URL in specific cases. Second, I wouldn't be surprised to see some bugs exploited in QR code scanning code by giving them strange codes to scan. These would not look like valid HR codes but would look like just another QR code. 
+
+
+> I'm open for a better name than "HR code".
 
 ## License
 
