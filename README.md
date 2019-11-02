@@ -1,4 +1,4 @@
-<img src="github_url_hr_code.png" width="51">
+<img src="github_url_hr_code.png" width="102">
   
 # HR code
 **Human Response Code**: Designed to be recognized by humans and OCR. Encodes all valid URL characters to images.
