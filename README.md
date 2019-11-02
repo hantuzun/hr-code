@@ -26,7 +26,7 @@ The most prevalent use case of QR codes is encoding URLs into images. For this p
 
 ### Overview
 
- * HR Codes a rectangle images.
+ * HR Codes are rectangle images.
  * HR Codes are surrounded by a border.
  * HR code is read from left to right and from top to bottom, just as English.
  * There must be an rightwards arrow on the top left.
